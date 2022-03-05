@@ -1,0 +1,94 @@
+html{
+    height: 100%;
+    margin: 0px;
+    font-weight: bolder;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    backdrop-filter: blur(8px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+}
+.container{
+    background-color: rgb(250, 247, 255);
+    box-shadow: 0px 0px 10px 0px rgb(235, 236, 245);
+    text-align: center;
+    width: max-content;
+    padding: 30px 100px;
+    margin: auto;
+}
+.topbar{
+    display: inline-flex;
+    margin: 8px 2px;
+    padding: 5px 2px;
+    width: -webkit-fill-available;
+}
+.loginout{
+    background: #e2e1ff;
+    text-decoration: none;
+    padding: 8px 8px;
+    border-radius: 8px;
+    margin-left: auto;
+    color: black;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.subcontainer{
+    margin: 50px;
+}
+.subsubcontainer{
+    display: inline-flex;
+}
+.subsubcontainer > *,.subsubcontainer > * > *{
+    padding: 15px;
+    border: none;
+    outline:none;
+    border-radius: 8px;
+}
+input{
+    background-color: #ebebeb;
+}
+input:focus{
+    border: 1px solid rgb(170, 186, 255);
+}
+.kuchbhi{
+    background-color: rgb(246, 238, 255);
+    height: min-content;
+    margin: auto;
+    font-weight: 600;
+    color:rgb(68, 68, 68);
+    font-size: 16px
+}
+
+table{
+    border-collapse:separate; 
+  border-spacing: 0 1.2em;
+}
+.delete{
+    background-color: #ff9191;
+    padding: 8px 16px;
+    color: black;
+}
+.edit{
+    background-color: #b9ff91;
+    padding: 8px 16px;
+    color: black;
+}
+
+.card-body{
+    padding: 20px;
+}
+.register-form{
+    text-align: start;
+}

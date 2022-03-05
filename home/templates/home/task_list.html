@@ -1,0 +1,72 @@
+
+{% extends 'home/main.html' %}
+{% block title %} ToDO list {% endblock %}
+{% block content %}
+    <div class="topbar">
+    {% if request.user.is_authenticated %}
+        <p><b>Welcome,  {{request.user}} </b></p> 
+        <a class="loginout" href="{% url 'logout' %}"> Log Out </a>
+    {% else %}
+    <a class="loginout" href ="{% url 'login' %}"> Log In </a>
+    {% endif %}
+    </div>
+    <div class='container'>
+        <div class="subcontainer">
+            <h1>This is your To_Do_List  </h1>
+        </div>
+        <div class="subcontainer">
+            
+            <div class="subsubcontainer">
+            
+                <form method='GET'  action="">
+                    <input type="text" name = 'search-area' value= {{search_input}}>
+                    <input class="kuchbhi" type="submit" value = 'search'>
+                </form>
+                <a class="kuchbhi" href="{% url 'task-create' %}"> Add Task </a>
+            </div>
+        </div>
+        <div id="task-list" class="subcontainer">
+            <table>
+                <tr>
+                    <th>
+                        Item
+                    </th>
+                    <th>
+                        
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+                {% for task in tasks %}
+                <tr>
+                    <td>
+                        {% if task.complete %}
+                        <i><s>
+                            {{task.title}}
+                        </s></i>
+
+                        {% else %}
+                        {{task.title}}
+                        {% endif %}
+                        
+                    </td>
+                    
+                    <td>
+
+                    </td>
+                    <td>
+                        <a class="edit" href="{% url 'task-update' task.id %}"> Edit </a>
+                    </td>
+                    <td>
+                        <a class="delete" href="{% url 'task-delete' task.id  %}"> Delete </a>
+                    </td>
+                </tr>
+                {% empty %}
+                <h3>No Items in the list </h3>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock content %}
