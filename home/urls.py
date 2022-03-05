@@ -1,5 +1,3 @@
-from distutils.sysconfig import customize_compiler
-from turtle import home
 from django.urls import path
 from home.views import taskDelete, taskList , taskDetail , taskCreate , taskUpdate , DeleteView , CustomLoginView , registerPage
 from django.contrib.auth.views import LogoutView
